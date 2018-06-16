@@ -20,10 +20,17 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-6">
-            <button class="btn btn-success" data-representative="jene-vickrey">Jene Vickrey</button>
-            <button class="btn btn-success" data-representative="melissa-rooker">Melissa Rooker</button>
+        <div class="col-6" id="buttons">
+            <button class="btn btn-danger" data-representative="jene-vickrey">Jene Vickrey</button>
+            <button class="btn btn-danger" data-representative="melissa-rooker">Melissa Rooker</button>
         </div>
+        <form>
+            <div class="form-group">
+                <label for="input-representative">Enter a state representative</label>
+                <input type="gif" class="form-control" id="create-gif" aria-describedby="emailHelp" placeholder="Enter representative">
+                <button type="submit" id="submit" class="btn btn-success">Submit</button>
+            </div>
+        </form>
     </div>
     <div class="row">
         <div class="col-12" id="gifs-go-here">
