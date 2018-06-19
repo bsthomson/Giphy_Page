@@ -10,18 +10,19 @@ function topicButtons() {
         gifBut.text(gifVal);
         $("#buttons").append(gifBut);       
     }
-    for (j=0; j < topics.length; j++){
-        topics.splice(0, topics.length);
-    }
 }
 topicButtons()
 
 $("#submit").on("click", function() {
     event.preventDefault();
+    $("#buttons").empty();
     var gifSub = $("#create-gif").val().trim();
     console.log(gifSub);
     topics.push(gifSub);
-    topicButtons();
+    console.log(topics);
+    if ($('#buttons').is(':empty')){
+        topicButtons();
+    };
     
 })
 
