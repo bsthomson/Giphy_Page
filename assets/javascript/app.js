@@ -8,7 +8,7 @@ function topicButtons() {
         gifBut.addClass("btn btn-danger");
         gifBut.attr("data-representative", gifVal);
         gifBut.text(gifVal);
-        $("#buttons").append(gifBut);       
+        $("#buttons").append(gifBut);    
     }
 }
 topicButtons()
@@ -47,11 +47,12 @@ $(document.body).on("click", ".btn-danger", function() {
             representativeImage.attr("data-animate", results[i].images.fixed_width.url);
             representativeImage.attr("data-state", "still");
             representativeImage.attr("class", "gif");
-
             
             gifDiv.prepend(representativeImage);
             
             $("#gifs-go-here").prepend(gifDiv);
+            var p = $("<p>").text("Rating: " + results[i].rating);
+            $(gifDiv).append(p);  
         }
     });
 });
